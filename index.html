@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Profile Card</title>
+
+<style>
+/* ---------- RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ---------- PAGE ---------- */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+/* ---------- CARD ---------- */
+.profile-card {
+  background: #fff;
+  width: 100%;
+  max-width: 360px;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  animation: fadeUp 0.8s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+}
+
+/* ---------- AVATAR ---------- */
+.avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #667eea;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* ---------- TEXT ---------- */
+h2 {
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+.role {
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.bio {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* ---------- BUTTONS ---------- */
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  background: #667eea;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #5563d6;
+  box-shadow: 0 8px 20px rgba(102,126,234,0.5);
+}
+
+.btn.outline {
+  background: transparent;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.btn.outline:hover {
+  background: #667eea;
+  color: #fff;
+}
+
+/* ---------- ANIMATION ---------- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- TABLET ---------- */
+@media (min-width: 768px) {
+  .profile-card {
+    max-width: 420px;
+  }
+}
+
+/* ---------- DESKTOP ---------- */
+@media (min-width: 1024px) {
+  .profile-card {
+    max-width: 480px;
+    padding: 2.5rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="profile-card">
+  <div class="avatar">
+    <img src="https://t3.ftcdn.net/jpg/13/11/22/86/360_F_1311228699_YoiLc5aJ3RWz3uRfdEtlV0UYSQjqf7RW.jpg" alt="Profile Image">
+  </div>
+
+  <h2>Monish Aswin</h2>
+  <p class="role">Software Engineer</p>
+
+  <p class="bio">
+    Passionate about building scalable applications and creating clean,
+    responsive UI designs.
+  </p>
+
+  <div class="actions">
+    <a href="#" class="btn">Follow</a>
+    <a href="#" class="btn outline">Message</a>
+  </div>
+</div>
+
+</body>
+</html>
